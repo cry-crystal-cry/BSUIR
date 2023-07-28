@@ -1,0 +1,1 @@
+Diameter of this graph is equal to 3
