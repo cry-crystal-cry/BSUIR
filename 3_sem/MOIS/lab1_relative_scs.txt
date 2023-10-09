@@ -1,0 +1,28 @@
+nrel_print
+	=>nrel_system_identifer: [print];;
+	=>nrel_domain_1: solid_physical_storage;
+	=>nrel_domain_2: information;
+	=>nrel_domain_3: solid_physical_storage_with_information;
+	<-rrel_key_element': def;
+	->...:
+		(*
+			<-sc_node_tuple;;
+			-> rrel_1: obj1 (* <- solid_physical_storage;; *);
+			-> rrel_2: obj2 (* <- information;; *);
+			-> rrel_3: obj3 (* <- solid_physical_storage_with_information;; *);
+		*);;
+
+
+def
+	<-definition;
+	=>nrel_translation*: text;
+	=>nrel_additional_consepts:...
+		(*
+			<- sc_node_tuple;;
+			->machines;;
+			->devices;;
+			->solid_physical_storage;;
+			->storing_information;;
+		*);;
+
+text->[the process of transferring information to a solid physical storage device using special devices and machines];;
