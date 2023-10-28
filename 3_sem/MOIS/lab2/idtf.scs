@@ -1,0 +1,193 @@
+section_subject_domain_of_printing 
+=> nrel_main_idtf: 
+    [Section. Subject domain of printing]
+    (* <- lang_en;; *);
+=> nrel_main_idtf:
+    [Раздел. Предметная область печати]
+    (* <- lang_ru;; *);;
+    
+section_subject_domain_of_polygraphy
+=> nrel_main_idtf:
+    [Раздел. Предметная область полиграфии]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Section. Subject domain of polygraphy]
+    (* <- lang_en;; *);;
+
+section_subject_domain_of_print_media
+=> nrel_main_idtf:
+    [Раздел. Предметная область печатных СМИ]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Section. Subject domain of print media]
+    (* <- lang_en;; *);;
+
+section_subject_domain_of_printer
+=> nrel_main_idtf:
+    [Раздел. Предметная область принтера]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Section. Subject domain of printer]
+    (* <- lang_en;; *);;
+
+section_subject_domain_of_fingerprint
+=> nrel_main_idtf:
+    [Раздел. Предметная область отпечатка пальца]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Section. Subject domain of fingerprint]
+    (* <- lang_en;; *);;
+
+section_subject_domain_of_rubber_stamp
+=> nrel_main_idtf:
+    [Раздел. Предметная область печатного штампа]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Section. Subject domain of rubber stamp]
+    (* <- lang_en;; *);;
+    
+
+concept_printing_press
+=> nrel_main_idtf:
+    [Типографический станок]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Printing press]
+    (* <- lang_en;; *);;
+
+concept_fingerprint
+=> nrel_main_idtf:
+    [Отпечаток пальца]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Fingerprint]
+    (* <- lang_en;; *);;
+
+concept_rubber_stamp
+=> nrel_main_idtf:
+    [Печатный штамп]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Rubber stamp]
+    (* <- lang_en;; *);;
+
+concept_ink
+=> nrel_main_idtf:
+    [Чернила]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Ink]
+    (* <- lang_en;; *);;
+    
+concept_print_media
+=> nrel_main_idtf:
+    [Печатные СМИ]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Print media]
+    (* <- lang_en;; *);;
+    
+subject_domain_of_printing
+=> nrel_main_idtf:
+    [Предметная область печати]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Subject domain of printing]
+    (* <- lang_en;; *);;
+    
+subject_domain_of_polygraphy
+=> nrel_main_idtf:
+    [Предметная область полиграфии]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Subject domain of polygraphy]
+    (* <- lang_en;; *);;
+
+subject_domain_of_print_media
+=> nrel_main_idtf:
+    [Предметная область печатных СМИ]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Subject domain of print media]
+    (* <- lang_en;; *);;
+
+subject_domain_of_printer
+=> nrel_main_idtf:
+    [Предметная область принтера]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Subject domain of printer]
+    (* <- lang_en;; *);;
+
+subject_domain_of_fingerprint
+=> nrel_main_idtf:
+    [Предметная область отпечатка пальца]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Subject domain of fingerprint]
+    (* <- lang_en;; *);;
+
+subject_domain_of_rubber_stamp
+=> nrel_main_idtf:
+    [Предметная область печатного штампа]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Subject domain of rubber stamp]
+    (* <- lang_en;; *);;
+
+concept_newspaper
+=> nrel_main_idtf:
+    [Газета]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Newspaper]
+    (* <- lang_en;; *);;
+
+concept_magazine
+=> nrel_main_idtf:
+    [Журнал]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Magazine]
+    (* <- lang_en;; *);;
+
+concept_printer
+=> nrel_main_idtf:
+    [Принтер]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Printer]
+    (* <- lang_en;; *);;
+
+concept_blueprint
+=> nrel_main_idtf:
+    [Чертеж]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Blueprint]
+    (* <- lang_en;; *);;
+
+
+nrel_copying
+=> nrel_main_idtf:
+    [Копировать]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Copying]
+    (* <- lang_en;; *);;
+
+nrel_printing
+=> nrel_main_idtf:
+    [Печатать]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Printing]
+    (* <- lang_en;; *);;
+
+nrel_publish
+=> nrel_main_idtf:
+    [Издавать]
+    (* <- lang_ru;; *);
+=> nrel_main_idtf:
+    [Publish]
+    (* <- lang_en;; *);;

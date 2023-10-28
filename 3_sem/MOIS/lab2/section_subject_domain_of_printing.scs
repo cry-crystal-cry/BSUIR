@@ -1,0 +1,44 @@
+section_subject_domain_of_printing 
+<- not_enough_formed_structure;
+<- sc_node_struct;
+<= nrel_section_decomposition: ... (*
+    <- sc_node_tuple;;
+    -> section_subject_domain_of_polygraphy;;   
+    -> section_subject_domain_of_print_media;;  
+    -> section_subject_domain_of_printer;;
+    -> section_subject_domain_of_fingerprint;;       
+    -> section_subject_domain_of_rubber_stamp;; 
+    *);
+-> rrel_key_sc_element:
+    concept_printing_press;
+    concept_fingerprint;
+    concept_rubber_stamp;
+    concept_ink;
+<- non_atomic_section;;
+
+section_subject_domain_of_printing = 
+[*
+subject_domain_of_printing
+<- subject_domain;
+-> rrel_maximum_studied_object_class: 
+    concept_printing_press;
+    concept_ink;
+    concept_fingerprint;
+    consept_print_media;
+=> nrel_private_subject_domain:
+    subject_domain_of_polygraphy;       
+    subject_domain_of_print_media;      
+    subject_domain_of_printer;        
+    subject_domain_of_fingerprint;      
+    subject_domain_of_rubber_stamp;
+-> rrel_not_maximum_studied_object_class: 
+    concept_newspaper;
+    concept_magazine;
+    concept_printer;
+    concept_rubber_stamp;
+    concept_blueprint;
+-> rrel_explored_relation:
+    nrel_copying;
+    nrel_printing;
+    nrel_publish;;
+*];;
