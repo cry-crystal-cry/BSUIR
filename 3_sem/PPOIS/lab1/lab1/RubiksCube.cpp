@@ -47,19 +47,19 @@ void RubiksCube::setCube(const vector<char>& vec)
 		cube[i].setSide(buf);
 	}
 }
-bool RubiksCube::chekColors()
+bool RubiksCube::chekColors() const
 {
 	int red(0), blue(0), orange(0), green(0), yellow(0), white(0), norm(CubeSide::SIZE * CubeSide::SIZE);
 	for (int i = 0; i < 6; cube[i++].chekColors(red, blue, orange, green, yellow, white));
 	return ((abs(red - norm) + abs(blue - norm) + abs(orange - norm) + abs(green - norm) + abs(yellow - norm) + abs(white - norm)) == 0);
 }
 
-int RubiksCube::random(const int& min, const int& max)
+int RubiksCube::random(const int& min, const int& max) const
 {
 	return rand() % (max - min + 1) + min;
 }
 
-void RubiksCube::showCubeCrossForSideWithoutRotationNeighbourSides(CubeSide& forWhichSideWasUsed)
+void RubiksCube::showCubeCrossForSideWithoutRotationNeighbourSides(CubeSide& forWhichSideWasUsed) const
 {
 	vector<char>* spaceFilledVector = new vector<char>((CubeSide::SIZE * CubeSide::SIZE), ' ');
 	CubeSide spaceFilledSide;
@@ -277,7 +277,7 @@ void RubiksCube::setFromFile(const string& filePath)
 	}
 }
 
-void RubiksCube::showCube()
+void RubiksCube::showCube() const
 {
 	for (int i = 0; i < 6; cube[i++].showSide());
 }

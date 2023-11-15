@@ -28,13 +28,13 @@ void CubeSide::setSide(const vector<char>& vec)
 		for (int j = 0; j < SIZE; side[i][j++] = vec[vecCounter++]);
 }
 
-void CubeSide::showLine(const int& n)
+void CubeSide::showLine(const int& n) const
 {
 	for (int i = 0; i < SIZE; cout << side[n][i++] << " ");
 	cout << "\t";
 }
 
-void CubeSide::showSide()
+void CubeSide::showSide() const
 {
 	for (int i = 0; i < SIZE; i++) {
 		showLine(i);
@@ -44,21 +44,21 @@ void CubeSide::showSide()
 }
 
 
-char* CubeSide::getLine(const int& n)
+char* CubeSide::getLine(const int& n) const
 {
 	for (int i = 0; i < SIZE; i++)
 		charBuff[i] = side[n][i];
 	return charBuff;
 }
 
-char* CubeSide::getColumn(const int& n)
+char* CubeSide::getColumn(const int& n) const
 {
 	for (int i = 0; i < SIZE; i++)
 		charBuff[i] = side[i][n];
 	return charBuff;
 }
 
-char CubeSide::getChar(const int& i, const int& j)
+char CubeSide::getChar(const int& i, const int& j) const
 {
 	return side[i][j];
 }
@@ -102,7 +102,7 @@ void CubeSide::backRotateSide()
 	delete buff;
 }
 
-void CubeSide::chekColors(int& red, int& blue, int& orange, int& green, int& yellow, int& white)
+void CubeSide::chekColors(int& red, int& blue, int& orange, int& green, int& yellow, int& white) const
 {
 	for (int i = 0; i < SIZE; i++)
 		for (int j = 0; j < SIZE; j++)
