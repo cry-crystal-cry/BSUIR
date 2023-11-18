@@ -1,5 +1,7 @@
 #include "CubeSide.h"
 
+const int CubeSide::SIZE = 3;
+
 CubeSide::CubeSide()
 {
 	side = new char* [SIZE];
@@ -43,7 +45,6 @@ void CubeSide::showSide() const
 	cout << "\n";
 }
 
-
 char* CubeSide::getLine(const int& n) const
 {
 	for (int i = 0; i < SIZE; i++)
@@ -56,11 +57,6 @@ char* CubeSide::getColumn(const int& n) const
 	for (int i = 0; i < SIZE; i++)
 		charBuff[i] = side[i][n];
 	return charBuff;
-}
-
-char CubeSide::getChar(const int& i, const int& j) const
-{
-	return side[i][j];
 }
 
 void CubeSide::setLine(const int& n, const char* l)
@@ -83,10 +79,8 @@ char* CubeSide::getReverseChar(char* mas)
 void CubeSide::rotateSide()
 {
 	CubeSide* buff = new CubeSide;
-	//for (int i = 0; i < SIZE; buff->setColumn((SIZE - 1 - i), side->getLine(i++)));		//THIS NOT WORKING BUT WORKING:
 	for (int i = 0; i < SIZE; i++)
 		buff->setColumn((SIZE - 1 - i), getLine(i));
-	//for (int i = 0; i < SIZE; side->setLine(i, buff->getLine(i++)));						//THIS NOT WORKING BUT WORKING:
 	for (int i = 0; i < SIZE; i++)
 		setLine(i, buff->getLine(i));
 	delete buff;
@@ -129,11 +123,16 @@ void CubeSide::chekColors(int& red, int& blue, int& orange, int& green, int& yel
 			};
 }
 
+char CubeSide::getChar(const int& i, const int& j) const
+{
+	return side[i][j];
+}
+
 bool CubeSide::operator==(CubeSide& other)
 {
+	bool buff = true;
 	for (int i = 0; i < SIZE; i++)
 		for (int j = 0; j < SIZE; j++)
-			if (side[i][j] != other.side[i][j])
-				return false;
-	return true;
+			buff *= (side[i][j] == other.getChar(i,j));
+	return buff;
 }

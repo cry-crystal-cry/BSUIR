@@ -6,7 +6,7 @@ using namespace std;
 
 class CubeSide {
 private:
-	static const int SIZE = 3;
+	static const int SIZE;
 	char** side;
 	char* charBuff;	//buff to store values from columns or lines, used in [get/set][Colomn/Line]
 	static char* getReverseChar(char*);
@@ -15,7 +15,6 @@ private:
 	void setColumn(const int&, const char*);
 	char* getLine(const int&) const;
 	char* getColumn(const int&) const;
-	char getChar(const int&, const int&) const;
 	void chekColors(int&, int&, int&, int&, int&, int&) const;
 	friend class RubiksCube;
 public:
@@ -29,5 +28,6 @@ public:
 	CubeSide* down;
 	CubeSide* left;
 	CubeSide* right;
+	char getChar(const int&, const int&) const;
 	bool operator==(CubeSide&);
 };
