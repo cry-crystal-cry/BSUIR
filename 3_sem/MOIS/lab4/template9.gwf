@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GWF version="2.0">
+    <staticSector>
+        <node type="node/const/perm/relation" idtf="nrel_printing" shapeColor="0" id="2290054308848" parent="2290051190880" left="0" top="0" right="82" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="182.5" y="306.5" haveBus="false" idtf_pos="1">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="concept_printer" shapeColor="0" id="2290054308432" parent="2290051190880" left="0" top="0" right="96" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="71.5" y="231.5" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/var/perm/general" idtf="_x9" shapeColor="193" id="2290054304064" parent="2290051190880" left="0" top="0" right="29" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="71.5" y="381.5" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <pair type="pair/var/-/perm/orient" idtf="" shapeColor="0" id="2290050570448" parent="2290051190880" id_b="2290054308432" id_e="2290054304064" b_x="71.5" b_y="231.5" e_x="71.5" e_y="381.5" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2290050570208" parent="2290051190880" id_b="2290054308848" id_e="2290050570448" b_x="182.5" b_y="306.5" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.5">
+            <points/>
+        </pair>
+        <contour type="contour/const/perm" idtf="template9" shapeColor="0" id="2290051190880" parent="0" left="0" top="0" right="63" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" idtf_pos_x="-93" idtf_pos_y="-126">
+            <points>
+                <point x="221.5" y="201.5"/>
+                <point x="26.5" y="201.5"/>
+                <point x="26.5" y="411.5"/>
+                <point x="221.5" y="411.5"/>
+            </points>
+        </contour>
+    </staticSector>
+</GWF>
