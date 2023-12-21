@@ -1,0 +1,7 @@
+graph 3
+v1 shape red 2
+0 1 1 white
+0 2 0 yellow
+v2 shape blue 0
+v3 shape green 1
+2 1 1 gray
