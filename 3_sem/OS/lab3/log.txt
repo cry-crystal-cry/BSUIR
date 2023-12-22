@@ -1,0 +1,8 @@
+Thread 1: Downloading image: https://digital-faculty.bsu.by/data///uploads/photo_5262941487753183526_y_1b948a0e42.jpg
+Thread 1: Failed to download image: Couldn't resolve host name
+Thread 2: Downloading image: https://digital-faculty.bsu.by/data///uploads/photo_5262941487753183526_y_1b948a0e42.jpg
+Thread 2: Downloaded 221378 bytes
+Thread 3: Downloading image: https://digital-faculty.bsu.by/data///uploads/photo_5262941487753183526_y_1b948a0e42.jpg
+Thread 3: Downloaded 442756 bytes
+Thread 4: Downloading image: https://digital-faculty.bsu.by/data///uploads/photo_5262941487753183526_y_1b948a0e42.jpg
+Thread 4: Downloaded 664134 bytes
