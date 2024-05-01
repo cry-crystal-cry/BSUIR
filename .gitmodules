@@ -1,3 +1,9 @@
 [submodule "3_sem/PPOIS"]
 	path = 3_sem/PPOIS
 	url = https://github.com/cry-crystal-cry/PPOIS
+[submodule "4_sem/medicine-course-project"]
+	path = 4_sem/medicine-course-project
+	url = https://github.com/cry-crystal-cry/medicine-course-project.git
+[submodule "4_sem/AOIS"]
+	path = 4_sem/AOIS
+	url = https://github.com/cry-crystal-cry/AOIS.git
