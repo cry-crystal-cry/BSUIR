@@ -1,0 +1,21 @@
+nrel_naimenovanie_strahovoy_med_organizacii
+
+=>nrel_first_domain:
+    concept_patient_rf;
+=>nrel_second_domain:
+    patient_1;
+
+=> nrel_main_idtf:
+    [наименование]
+    (* <- lang_ru;; *);
+       
+    => nrel_note:
+        [Название организации]
+        (*<-lang_ru;;*);
+           
+<-sc_node_norole_relation;
+<-oriented_relation;
+<-binary_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;

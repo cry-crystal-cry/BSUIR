@@ -1,0 +1,22 @@
+nrel_jitel
+
+=>nrel_first_domain:
+    concept_patient_rb;
+=>nrel_second_domain:
+    patient_0;
+    
+    
+=> nrel_main_idtf:
+    [Житель]
+    (* <- lang_ru;; *);
+    
+    => nrel_note:
+        [устанавливает, является ли больной сельским или городским жителем]
+        (*<-lang_ru;;*);
+
+    
+<-sc_node_norole_relation;    
+<-oriented_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;

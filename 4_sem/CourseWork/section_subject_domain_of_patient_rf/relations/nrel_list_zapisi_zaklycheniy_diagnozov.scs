@@ -1,0 +1,21 @@
+nrel_list_zapisi_zaklycheniy_diagnozov
+
+=>nrel_first_domain:
+    concept_patient_rf;
+=>nrel_second_domain:
+    patient_1;
+
+=> nrel_main_idtf:
+    [Лист записи заключений диагнозов]
+    (* <- lang_ru;; *);
+       
+    => nrel_note:
+        [Лист для записи заключений и диагнозов больного]
+        (*<-lang_ru;;*);
+           
+<-sc_node_norole_relation;
+<-oriented_relation;
+<-binary_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;

@@ -1,0 +1,39 @@
+nrel_adres_po_mestu_jitelstva_bolnogo;
+
+=>nrel_first_domain:
+    concept_patient_rb;
+=>nrel_second_domain:
+    Пациент_0;
+    
+    
+=> nrel_main_idtf:
+    [Адрес по месту жительства больного *]
+    (* <- lang_ru;; *);
+    
+    => nrel_note:
+        [адрес, где постоянно проживает больной. Записывается в формате: область/года (пгт)/село (деревня)/ 
+         ул/проспект/переулок/проезд
+         дом/корпус/кв/тел дом]
+        (*<-lang_ru;;*);
+
+    
+<-sc_node_norole_relation;    
+<-oriented_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+

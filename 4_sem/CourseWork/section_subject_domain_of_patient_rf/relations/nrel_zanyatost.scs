@@ -1,0 +1,21 @@
+nrel_zanyatost
+
+=>nrel_first_domain:
+    concept_patient_rf;
+=>nrel_second_domain:
+    patient_1;
+
+=> nrel_main_idtf:
+    [занятость]
+    (* <- lang_ru;; *);
+       
+    => nrel_note:
+        [работает, проходит военную службу, пенсионер, студент, не работает, прочие]
+        (*<-lang_ru;;*);
+           
+<-sc_node_norole_relation;
+<-oriented_relation;
+<-binary_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;

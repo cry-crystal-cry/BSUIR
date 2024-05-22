@@ -1,0 +1,24 @@
+nrel_semeynoe_polojenie
+
+=>nrel_first_domain:
+    concept_patient_rb;
+=>nrel_second_domain:
+    patient_0;
+    
+    
+=> nrel_main_idtf:
+    [Семейное положение]
+    (* <- lang_ru;; *);
+    
+    => nrel_note:
+        [устанавливает семейное положение больного. Например: женат, холост, разведен(а),
+         замужем, не замужем, вдова, вдовец]
+        (*<-lang_ru;;*);
+
+    
+<-sc_node_norole_relation;    
+<-oriented_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;
+

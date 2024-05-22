@@ -1,0 +1,30 @@
+nrel_gruppa_krovi_rezus_prinadlejnost
+
+=>nrel_first_domain:
+    concept_patient_rb;
+=>nrel_second_domain:
+    patient_0;
+    
+    
+=> nrel_main_idtf:
+    [Группа крови резус принадлежность]
+    (* <- lang_ru;; *);
+    
+    => nrel_note:
+        [устанавливает, группу крови и резус принадлежность больного. Например: 
+         O(I) Rh+ — первая положительная;
+         O(I) Rh− — первая отрицательная;
+         A(II) Rh+ — вторая положительная;
+         A(II) Rh− — вторая отрицательная;
+         B (III) Rh+ — третья положительная;
+         B (III) Rh− — третья отрицательная;
+         AB (IV) Rh+ — четвёртая положительная;
+         AB (IV) Rh− — четвёртая отрицательная]
+        (*<-lang_ru;;*);
+
+    
+<-sc_node_norole_relation;    
+<-oriented_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;

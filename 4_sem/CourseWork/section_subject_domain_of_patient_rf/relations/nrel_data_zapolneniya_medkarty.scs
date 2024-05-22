@@ -1,0 +1,22 @@
+nrel_data_zapolneniya_medkarty
+
+=>nrel_first_domain:
+    concept_patient_rf;
+=>nrel_second_domain:
+    patient_1;
+    
+    
+=> nrel_main_idtf:
+    [ДД.ММ.ГГ *]
+    (* <- lang_ru;; *);
+    
+    => nrel_note:
+        [Дата заполнения медкарты, заполняется по стандарту: ДД.ММ.ГГ]
+        (*<-lang_ru;;*);
+
+    
+<-sc_node_norole_relation;    
+<-oriented_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;

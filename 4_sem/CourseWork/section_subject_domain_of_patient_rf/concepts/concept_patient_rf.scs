@@ -1,0 +1,16 @@
+concept_patient_rf
+
+<- sc_node_class;
+
+=> nrel_main_idtf:
+	[Пациент РФ]
+	(* <- lang_ru;; *);
+    [Patient RF]
+	(* <- lang_en;; *);
+
+=> nrel_inclusion:
+   patient_1;
+          
+=> nrel_note:
+    [Включения из медицинской карты пациента Российской Федерации]
+	(* <- lang_ru;; *);;

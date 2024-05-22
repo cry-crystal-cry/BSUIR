@@ -1,0 +1,156 @@
+patient_1
+
+=> nrel_main_idtf:
+    [Пациент_1]
+    (* <- lang_ru;; *);
+    [Patient_1]
+	(* <- lang_en;; *);
+
+
+=> nrel_data_zapolneniya_medkarty:
+    [12.01.2023]
+    (*<-lang_ru;;*);
+    <-nrel_data_zapolneniya_medkarty;
+    
+    
+=> nrel_fio:
+    [Морозов Павел Сергеевич](*<-lang_ru;;*);
+    [Morozov Pavel Sergeevich](*<-lang_en;;*);
+    <-nrel_fio;
+  
+  
+=> nrel_pol:
+    [М](* <- lang_ru;;*);
+    <-nrel_pol;
+  
+  
+=> nrel_data_rojdeniya:
+    [29.10.1990](* <- lang_ru;;*);
+    [29.10.1990](* <- lang_en;;*);
+    <-nrel_data_rojdeniya;
+    
+        
+=> nrel_mestnost:
+    [городская]
+    (*<-lang_ru;;*);
+    <-nrel_mestnost;
+
+
+=> nrel_mesto_registracii:
+    [Московская область, г. Москва, Мещанский район, ул. Ленина, д-1, кв-19]
+    (*<-lang_ru;;*);
+    <-nrel_mesto_registracii;
+
+
+=> nrel_polis_oms:
+    [0000 0000 0000 0000]
+    (*<-lang_ru;;*);
+    <-nrel_polis_oms;
+
+
+=> nrel_snils:
+    [000 000 000 00]
+    (*<-lang_ru;;*);
+    <-nrel_snils;
+
+
+=> nrel_naimenovanie_strahovoy_med_organizacii:
+    [Название страховой мед организации]
+    (*<-lang_ru;;*);
+    <-nrel_naimenovanie_strahovoy_med_organizacii;
+
+
+=> nrel_kod_kategorii_lgoty:
+    [0 00 2]
+    (*<-lang_ru;;*);
+    <-nrel_kod_kategorii_lgoty;
+    
+    
+=> nrel_dokument_na_lgoty:
+    [Наименование документа]
+    (*<-lang_ru;;*);
+    <-nrel_dokument_na_lgoty;
+    
+    
+=> nrel_zabolevanie:
+    [Бронхит]
+    (*<-lang_ru;;*);
+    <-nrel_zabolevanie;
+    
+    
+=> nrel_semeynoe_polojenie:
+    [состоит в зарегистрированном браке, не состоит в браке, неизвестно]
+    (*<-lang_ru;;*);
+    <-nrel_semeynoe_polojenie;
+    
+    
+=> nrel_obrazovanie:
+    [высшее]
+    (*<-lang_ru;;*);
+    <-nrel_obrazovanie;
+
+
+=> nrel_zanyatost:
+    [работает]
+    (*<-lang_ru;;*);
+    <-nrel_zanyatost;
+
+
+=> nrel_invalidnost_data:
+    [Данные]
+    (*<-lang_ru;;*);
+    <-nrel_invalidnost_data;
+
+
+=> nrel_mesto_raboty_doljnost:
+    [Софтклаб, инженер-программист]
+    (*<-lang_ru;;*);
+    <-nrel_mesto_raboty_doljnost;
+
+  
+=> nrel_izmenenie_mesta_raboty:
+    [Пометка об изменении места работы]
+    (*<-lang_ru;;*);
+    <-nrel_izmenenie_mesta_raboty;
+
+
+=> nrel_izmenenie_mesta_registracii:
+    [Пометка об изменении места регистрации]
+    (*<-lang_ru;;*);
+    <-nrel_izmenenie_mesta_registracii;
+
+
+=> nrel_list_zapisi_zaklycheniy_diagnozov:
+    [Записи]
+    (*<-lang_ru;;*);
+    <-nrel_list_zapisi_zaklycheniy_diagnozov;
+
+
+=> nrel_gruppa_krovi:
+    [А(1)]
+    (*<-lang_ru;;*);
+    <-nrel_gruppa_krovi;
+
+
+=> nrel_rh_factor:
+    [Rh+]
+    (*<-lang_ru;;*);
+    <-nrel_rh_factor;
+
+
+=> nrel_allergicheskie_reakcii:
+    [Отсутствуют]
+    (*<-lang_ru;;*);
+    <-nrel_allergicheskie_reakcii;
+
+   
+=> nrel_note:
+    [Медкарта больного согласно (госту) 
+     форме №025/у приказу МЗРФ от 15.12.2014 №834н"]
+    (*<-lang_ru;;*);
+    
+    
+<-concept_patient_rf;
+<-binary_relation;;
+	
+	

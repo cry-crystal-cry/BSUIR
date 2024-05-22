@@ -1,0 +1,16 @@
+concept_patient_rb
+
+<- sc_node_class;
+
+=> nrel_main_idtf:
+	[Пациент РБ]
+	(* <- lang_ru;; *);
+    [Patient RB]
+	(* <- lang_en;; *);
+
+=> nrel_inclusion:
+   patient_0;
+          
+=> nrel_note:
+    [Включения из медицинской карты пациента Республики Беларусь]
+	(* <- lang_ru;; *);;

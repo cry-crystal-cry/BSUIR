@@ -1,0 +1,168 @@
+patient_0
+
+=> nrel_main_idtf:
+    [Пациент 0]
+    (* <- lang_ru;; *);
+    [Patient 0]
+	(* <- lang_en;; *);
+
+
+=> nrel_osobye_otmetki:
+    [Инвалид ВОВ, участник ВОВ, участник ликвидации катастрофы на ЧАЭС]
+    (*<-lang_ru;;*);
+    <-nrel_osobye_otmetki;
+
+
+=> nrel_lichny_nomer_po_pasportu:
+    [Ц ЦЦЦЦЦЦ Б ХХХ ББ Ц]
+    (*<-lang_ru;;*);
+    <-nrel_lichny_nomer_po_pasportu;
+    
+    
+=> nrel_fio:
+    [Петров Иван Иванович](*<-lang_ru;;*);
+    [Petrov Ivan Ivanovich](*<-lang_en;;*);
+    <-nrel_fio;
+  
+  
+=> nrel_data_rojdeniya:
+    [28.02.1964](* <- lang_ru;;*);
+    [28.02.1964](* <- lang_en;;*);
+    <-nrel_data_rojdeniya;
+    
+    
+=> nrel_pol:
+    [М](* <- lang_ru;;*);
+    [M](* <- lang_en;;*);
+    <-nrel_pol;
+        
+        
+=> nrel_dokument_udostoveryaushiy_lichnost_bolnogo:
+    [Ц ЦЦЦЦЦЦ Б ХХХ ББ Ц]
+    (*<-lang_ru;;*);
+    <-nrel_dokument_udostoveryaushiy_lichnost_bolnogo;
+
+
+=> nrel_adres_po_mestu_jitelstva_bolnogo:
+    [Минская область, г. Минск, Первомайский район, ул. Чорного 25, кв-21]
+    (*<-lang_ru;;*);
+    <-nrel_adres_po_mestu_jitelstva_bolnogo;
+
+
+=> nrel_adres_po_mestu_registracii_bolnogo:
+    [Минская область, г. Минск, Первомайский район, ул. Чорного 25, кв-21]
+    (*<-lang_ru;;*);
+    <-nrel_adres_po_mestu_registracii_bolnogo;
+
+
+=> nrel_jitel:
+    [Городской]
+    (*<-lang_ru;;*);
+    <-nrel_jitel;
+
+
+=> nrel_usloviya_projivaniya:
+    [Квартира]
+    (*<-lang_ru;;*);
+    <-nrel_usloviya_projivaniya;
+
+
+=> nrel_otnoshenie_k_trudu:
+    [Работающий, неработающий (учащийся, студент, пенсионер, домохозяйка, безработный, иждивенец)]
+    (*<-lang_ru;;*);
+    <-nrel_otnoshenie_k_trudu;
+    
+    
+=> nrel_mesto_raboty_ucheby:
+    [УО БГУИР]
+    (*<-lang_ru;;*);
+    <-nrel_mesto_raboty_ucheby;
+    
+    
+=> nrel_professiya_doljnost:
+    [Ассистент]
+    (*<-lang_ru;;*);
+    <-nrel_professiya_doljnost;
+    
+    
+=> nrel_semeynoe_polojenie:
+    [Женат, холост, разведен, замужем, не замужем, вдова, вдовец]
+    (*<-lang_ru;;*);
+    <-nrel_semeynoe_polojenie;
+    
+    
+=> nrel_vid_oplaty:
+    [За счет бюджетных средств, собственных средств, медицинского страхования (добровольного, обязательного]
+    (*<-lang_ru;;*);
+    <-nrel_vid_oplaty;
+
+
+=> nrel_straxovoy_polis:
+    [0000 0000 0000 0000]
+    (*<-lang_ru;;*);
+    <-nrel_straxovoy_polis;
+
+
+=> nrel_invalidnost:
+    [Группа]
+    (*<-lang_ru;;*);
+    <-nrel_invalidnost;
+
+
+=> nrel_dokument_udostoveryaushiy_pravo_na_lgotnoe_obslujivanie:
+    [Документ]
+    (*<-lang_ru;;*);
+    <-nrel_документ_dokument_udostoveryaushiy_pravo_na_lgotnoe_obslujivanie;
+
+  
+=> nrel_gruppa_krovi_rezus_prinadlejnost:
+    [А(ll)]
+    (*<-lang_ru;;*);
+    <-nrel_gruppa_krovi_rezus_prinadlejnost;
+
+
+=> nrel_allergicheskiy_anamnez:
+    [данные анамнеза]
+    (*<-lang_ru;;*);
+    <-nrel_allergicheskiy_anamnez;
+
+
+=> nrel_lekarstvennaya_neperenosimost:
+    [данные]
+    (*<-lang_ru;;*);
+    <-nrel_lekarstvennaya_neperenosimost;
+
+
+=> nrel_reakcii_na_privivki:
+    [данные о реакциях]
+    (*<-lang_ru;;*);
+    <-nrel_reakcii_na_privivki;
+
+
+=> nrel_perelivanie_krovi:
+    [данные о переливании]
+    (*<-lang_ru;;*);
+    <-nrel_perelivanie_krovi;
+
+
+=> nrel_hirurgicheskoe_vmeshatelstvo:
+    [данные о хирургических вмешательствах]
+    (*<-lang_ru;;*);
+    <-nrel_hirurgicheskoe_vmeshatelstvo;
+
+   
+=> nrel_perenesennye_infekcionnye_zabolevaniya:
+    [данные о перенесенных инфекционных заболеваниях]
+    (*<-lang_ru;;*);
+    <-nrel_perenesennye_infekcionnye_zabolevaniya;
+
+   
+=> nrel_note:
+    [Медкарта больного согласно (госту) форме №025/у-07 и приказу МЗРБ от 30.08.2007 №7710"]
+    (*<-lang_ru;;*);
+    
+    
+<-concept_patient_rb;
+<-binary_relation;;
+	
+	

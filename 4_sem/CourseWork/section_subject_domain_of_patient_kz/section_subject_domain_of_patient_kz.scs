@@ -1,0 +1,42 @@
+section_subject_domain_of_patient_kz
+<- sc_node_struct;
+=> nrel_main_idtf:
+[Раздел. Предметная область пациент КЗ](* <- lang_ru;; *);
+[Section. Subject domain of patient KZ](* <- lang_en;; *);
+<-atomic_section;;
+
+section_subject_domain_of_patient_kz = [*
+subject_domain_of_patient_kz
+=> nrel_main_idtf:
+[Предметная область пациент КЗ](* <- lang_ru;; *);
+[Subject domain of patient KZ](* <- lang_en;; *);
+<- subject_domain;
+-> rrel_maximum_studied_object_class:
+   concept_of_patient_kz;
+-> rrel_not_maximum_studied_object_class:
+  
+   concept_patient_kz;
+   patient_2;
+   
+   
+-> rrel_explored_relation:
+   nrel_inn;
+   nrel_fio;
+   nrel_data_rojdeniya;
+   nrel_pol;
+   nrel_vozrast;
+   nrel_nacionalnost;
+   nrel_jitel;
+   nrel_grajdanstvo;
+   nrel_adres_projivaniya; 
+   nrel_mesto_raboty_ucheby_detskogo_uchrejdeniya;
+   nrel_naimenovanie_strahovoy_kompanii;
+   nrel_tip_vozmesheniya;
+   nrel_socialniy_status;
+   nrel_povod_obrasheniya;
+   nrel_minimalnye_medicinskie_svedeniya;
+   nrel_gruppa_krovi_rezus_faktor;
+   nrel_allergicheskie_reakcii;
+   nrel_fiziologicheskoe_sostoyanie_pacienta;
+      
+   *];;

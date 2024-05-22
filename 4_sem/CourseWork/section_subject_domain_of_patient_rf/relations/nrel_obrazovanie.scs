@@ -1,0 +1,21 @@
+nrel_obrazovanie
+
+=>nrel_first_domain:
+    concept_patient_rf;
+=>nrel_second_domain:
+    patient_1;
+
+=> nrel_main_idtf:
+    [Образование]
+    (* <- lang_ru;; *);
+       
+    => nrel_note:
+        [профессиональное: высшее, среднее/общее: среднее, основное, начальное, неизвестно]
+        (*<-lang_ru;;*);
+           
+<-sc_node_norole_relation;
+<-oriented_relation;
+<-binary_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;

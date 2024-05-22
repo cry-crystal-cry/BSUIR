@@ -1,0 +1,22 @@
+nrel_straxovoy_polis
+
+=>nrel_first_domain:
+    concept_patient_rb;
+=>nrel_second_domain:
+    patient_0;
+    
+    
+=> nrel_main_idtf:
+    [Страховой полис]
+    (* <- lang_ru;; *);
+    
+    => nrel_note:
+        [включает в себя идентификаторы страхового полиса больного]
+        (*<-lang_ru;;*);
+
+    
+<-sc_node_norole_relation;    
+<-oriented_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;

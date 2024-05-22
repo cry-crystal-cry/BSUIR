@@ -1,0 +1,22 @@
+nrel_perenesennye_infekcionnye_zabolevaniya
+
+=>nrel_first_domain:
+    concept_patient_rb;
+=>nrel_second_domain:
+    patient_0;
+    
+    
+=> nrel_main_idtf:
+    [Перенесенные инфекционные заболевания]
+    (* <- lang_ru;; *);
+    
+    => nrel_note:
+        [Устанавливает, какие инфекционные заболевания перенес больной]
+        (*<-lang_ru;;*);
+
+    
+<-sc_node_norole_relation;    
+<-oriented_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;

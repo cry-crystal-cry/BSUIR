@@ -1,0 +1,49 @@
+section_subject_domain_of_patient_rb
+<- sc_node_struct;
+=> nrel_main_idtf:
+[Раздел. Предметная область пациент РБ](* <- lang_ru;; *);
+[Section. Subject domain of patient RB](* <- lang_en;; *);
+<-atomic_section;;
+
+section_subject_domain_of_patient_rb = [*
+subject_domain_of_patient_rb
+=> nrel_main_idtf:
+[Предметная область пациент РБ](* <- lang_ru;; *);
+[Subject domain of patient RB](* <- lang_en;; *);
+<- subject_domain;
+-> rrel_maximum_studied_object_class:
+   concept_of_patient_rb;
+-> rrel_not_maximum_studied_object_class:
+  
+   concept_patient_rb;
+   patient_0;
+   
+   
+-> rrel_explored_relation:
+   nrel_osobye_otmetki;
+   nrel_lichny_nomer_po_pasportu;
+   nrel_fio;
+   nrel_data_rojdeniya;
+   nrel_pol;
+   nrel_dokument_udostoveryaushiy_lichnost_bolnogo;
+   nrel_adres_po_mestu_jitelstva_bolnogo;
+   nrel_adres_po_mestu_registracii_bolnogo;
+   nrel_jitel;
+   nrel_usloviya_projivaniya;
+   nrel_otnoshenie_k_trudu;
+   nrel_mesto_raboty_ucheby;
+   nrel_professiya_doljnost;
+   nrel_semeynoe_polojenie;
+   nrel_vid_oplaty;
+   nrel_straxovoy_polis;
+   nrel_invalidnost;
+   nrel_dokument_udostoveryaushiy_pravo_na_lgotnoe_obespechenie;
+   nrel_gruppa_krovi_rezus_prinadlejnost;
+   nrel_allergicheskiy_anamnez;
+   nrel_lekarstvennaya_neperenosimost;
+   nrel_reakcii_na_privivki;
+   nrel_perelivanie_krovi;
+   nrel_hirurgicheskoe_vmeshatelstvo;
+   nrel_perenesennye_infekcionnye_zabolevaniya;
+
+   *];;

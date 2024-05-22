@@ -1,0 +1,122 @@
+patient_2
+
+=> nrel_main_idtf:
+    [Пациент 2]
+    (* <- lang_ru;; *);
+    [Patient 2]
+	(* <- lang_en;; *);
+
+
+=> nrel_inn:
+    [номер]
+    (*<-lang_ru;;*);
+    <-nrel_;
+    
+    
+=> nrel_fio:
+    [Рахматов Аманбек Кудайбергенович](*<-lang_ru;;*);
+    [Rahmatov Amanbek Kudaybergenovich](*<-lang_en;;*);
+    <-nrel_fio;
+    
+  
+=> nrel_data_rojdeniya:
+    [29.10.1990](* <- lang_ru;;*);
+    [29.10.1990](* <- lang_en;;*);
+    <-nrel_data_rojdeniya;
+    
+=> nrel_пол:
+    [М](* <- lang_ru;;*);
+    [M](* <- lang_en;;*);
+    <-nrel_пол;
+    
+        
+=> nrel_vozrast:
+    [33](*<-lang_ru;;*);
+    <-nrel_vozrast;
+    
+    
+=> nrel_nacionalnost:
+    [Казах](*<-lang_ru;;*);
+    [Kazakh](*<-lang_en;;*);
+    <-nrel_nacionalnost;
+    
+=> nrel_jitel:
+    [Городской](*<-lang_ru;;*);
+    <-nrel_jitel;
+    
+    => nrel_grajdanstvo:
+    [Республика Казахстан](*<-lang_ru;;*);
+    <-nrel_grajdanstvo;
+    
+
+=> nrel_adres_projivaniya:
+    [Алматинская область, г. Алмата, Центральный район, ул. Угли, д-1, кв-19]
+    (*<-lang_ru;;*);
+    <-nrel_adres_projivaniya;
+
+
+=> nrel_mesto_raboty_ucheby_detskogo_uchrejdeniya:
+    [OOO "Акфа"]
+    (*<-lang_ru;;*);
+    <-nrel_mesto_raboty_ucheby_detskogo_uchrejdeniya;
+
+
+=> nrel_naimenovanie_strahovoy_kompanii:
+    [ОАО "Каз страх сервис"]
+    (*<-lang_ru;;*);
+    <-nrel_naimenovanie_strahovoy_kompanii;
+
+
+=> nrel_tip_vozmesheniya:
+    [Платное]
+    (*<-lang_ru;;*);
+    <-nrel_tip_vozmesheniya;
+
+
+=> nrel_socialniy_status:
+    [Работает]
+    (*<-lang_ru;;*);
+    <-nrel_socialniy_status;
+    
+    
+=> nrel_povod_obrasheniya:
+    [Наименование]
+    (*<-lang_ru;;*);
+    <-nrel_povod_obrasheniya;
+    
+    
+=> nrel_minimalnye_medicinskie_svedeniya:
+    [Сведения]
+    (*<-lang_ru;;*);
+    <-nrel_minimalnye_medicinskie_svedeniya;
+    
+    
+=> nrel_gruppa_krovi_rezus_faktor:
+    [A Rh+ ]
+    (*<-lang_ru;;*);
+    <-nrel_gruppa_krovi_rezus_faktor;
+    
+    
+=> nrel_allergicheskie_reakcii:
+    [Отсутствуют]
+    (*<-lang_ru;;*);
+    <-nrel_allergicheskie_reakcii;
+
+
+=> nrel_fiziologicheskoe_sostoyanie_pacienta:
+    [Сведения]
+    (*<-lang_ru;;*);
+    <-nrel_fiziologicheskoe_sostoyanie_pacienta;
+
+   
+=> nrel_note:
+    [Медкарта больного согласно (госту) 
+     форме №052/у приказу МЗРК
+     от 30.12.2020 № КР ДСМ-175/200"]
+    (*<-lang_ru;;*);
+    
+    
+<-concept_patient_kz;
+<-binary_relation;;
+	
+	

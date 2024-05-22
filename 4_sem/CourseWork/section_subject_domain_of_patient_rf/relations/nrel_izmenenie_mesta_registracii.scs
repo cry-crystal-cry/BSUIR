@@ -1,0 +1,21 @@
+nrel_izmenenie_mesta_registracii
+
+=>nrel_first_domain:
+    concept_patient_rf;
+=>nrel_second_domain:
+    patient_1;
+
+=> nrel_main_idtf:
+    [Изменение места регистрации]
+    (* <- lang_ru;; *);
+       
+    => nrel_note:
+        [Отметка об изменении места регистрации больного]
+        (*<-lang_ru;;*);
+           
+<-sc_node_norole_relation;
+<-oriented_relation;
+<-binary_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;

@@ -1,0 +1,23 @@
+nrel_usloviya_projivaniya
+ 
+=>nrel_first_domain:
+    concept_patient_rb;
+=>nrel_second_domain:
+    patient_0;
+    
+    
+=> nrel_main_idtf:
+    [Условия проживания]
+    (* <- lang_ru;; *);
+    
+    => nrel_note:
+        [устанавливает, в каких условиях проживает больной. Например: собственный дом, отдельная квартира, многонаселенная
+         квартира, комната в коммунальной квартире, общежитие]
+        (*<-lang_ru;;*);
+
+    
+<-sc_node_norole_relation;    
+<-oriented_relation;
+<-antisymmetric_relation;
+<-antireflexive_relation;
+<-binary_relation;;
