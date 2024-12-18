@@ -1,0 +1,85 @@
+@startuml
+[*] --> c1
+
+state c1 <<choice>>
+c1 --> FetchingStandard : decision == "start production"
+c1 --> [*] : decision == "end system"
+
+state FetchingStandard {
+  FetchingStandard : entry / Operator::requestStandard()
+  FetchingStandard : do / Database::retrieveStandard()
+  FetchingStandard : exit / log("Standard retrieved")
+  
+  FetchingStandard --> DecidingParameters : standard fetched
+}
+
+state DecidingParameters {
+  DecidingParameters : entry / Operator::decideParameters()
+  DecidingParameters : do / Operator::evaluateOptions()
+  DecidingParameters : exit / log("Parameters decided")
+  
+  DecidingParameters --> CreatingProduct : parameters decided
+}
+
+state CreatingProduct {
+  CreatingProduct : entry / Operator::createProduct()
+  CreatingProduct : do / Operator::setProductParameters()
+  CreatingProduct : exit / log("Product created")
+  
+  CreatingProduct --> WaitingForInspection : product created
+}
+
+state WaitingForInspection {
+  WaitingForInspection : entry / Operator::waitForInspector()
+  WaitingForInspection : do / log("Waiting for inspector")
+  WaitingForInspection : exit / log("Inspector arrived")
+  
+  WaitingForInspection --> FetchingInspectionStandard : ready for inspection
+}
+
+state FetchingInspectionStandard {
+  FetchingInspectionStandard : entry / Inspector::requestStandard()
+  FetchingInspectionStandard : do / Database::retrieveStandard()
+  FetchingInspectionStandard : exit / log("Inspection standard retrieved")
+  
+  FetchingInspectionStandard --> PerformingMeasurement : standard fetched
+}
+
+state PerformingMeasurement {
+  PerformingMeasurement : entry / Inspector::performMeasurement()
+  PerformingMeasurement : do / Inspector::compareWithStandard()
+  PerformingMeasurement : exit / log("Measurement performed")
+  
+  PerformingMeasurement --> ComparingWithStandard : measurement done
+}
+
+state ComparingWithStandard {
+  ComparingWithStandard : entry / Inspector::compareWithStandard()
+  ComparingWithStandard : do / Inspector::markProduct()
+  ComparingWithStandard : exit / log("Product compared with standard")
+  
+  ComparingWithStandard --> CreatingReport : comparison done
+}
+
+state CreatingReport {
+  CreatingReport : entry / Inspector::createReport()
+  CreatingReport : do / Inspector::finalizeReport()
+  CreatingReport : exit / log("Report created")
+  
+  CreatingReport --> c2 : report done
+}
+
+state c2 <<choice>>
+c2 --> MakingRemark : decision == "make remark"
+c2 --> FetchingStandard : decision == "start production"
+c2 --> FetchingInspectionStandard : decision == "start inspection"
+c2 --> [*] : decision == "end system"
+
+state MakingRemark {
+  MakingRemark : entry / Inspector::makeRemark()
+  MakingRemark : do / Inspector::notifyOperator()
+  MakingRemark : exit / log("Remark made")
+  
+  MakingRemark --> c2: remark done
+}
+@enduml

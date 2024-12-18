@@ -1,0 +1,190 @@
+@startuml
+skinparam classBackgroundColor<<Development>> LightGreen
+
+' Абстрактный класс Person
+abstract class Person {
+  +id: int
+  +personalData: PersonalData
+  +products: List<Product>
+  +participateInProcess(): void
+  +transferProduct(product: Product, toPerson: Person): void
+  +receiveProduct(product: Product, fromPerson: Person): void
+}
+
+' Оператор и Инспектор наследуют Person
+class Operator {
+  +participateInProduction(): void
+  +requestStandard(database: Database, productType: string): Standard
+  +createProduct(parameters: List<Parameter>, standard: Standard): Product
+  +setProductParameters(product: Product, parameters: List<Parameter>): void
+}
+
+class Inspector {
+  +participateInInspection(): void
+  +performMeasurement(product: Product): Measurement
+  +compareWithStandard(measurement: Measurement, standard: Standard): bool
+  +markProduct(product: Product, status: string): void
+  +createReport(operator: Operator, product: Product, remarks: string): Report
+}
+
+Person <|-- Operator : "inherits / наследует"
+Person <|-- Inspector : "inherits / наследует"
+
+' Личные данные
+class PersonalData {
+  +id: int
+  +firstName: string
+  +lastName: string
+  +birthDate: Date
+  +address: string
+}
+
+Person *-- PersonalData : "Composition: has / композиция: содержит"
+
+' Продукт и параметры
+class Product {
+  +id: int
+  +productionDate: Date
+  +status: string
+  +parameters: List<Parameter>
+}
+
+class Parameter {
+  +id: int
+  +name: string
+  +unit: string
+  +value: double
+}
+
+Product *-- Parameter : "Composition: has parameters / композиция: содержит параметры"
+
+' Стандарт для параметров
+class Standard {
+  +id: int
+  +name: string
+  +normativeValue: double
+}
+
+Standard --> Parameter : "Dependency: guides / зависимость: руководит"
+
+' База данных для хранения стандартов
+class Database <<Development>> {
+  +standards: List<Standard>
+  +retrieveStandard(productType: string): Standard
+}
+
+Database o-- Standard : "Aggregation: stores / агрегация: хранит стандарты"
+
+' Единая база данных со всем нормативными требованиями
+class DatabaseWithAllStandarts <<Development>> {
+  +standards: List<Database>
+  +retrieveStandardForSpeshialDomain(nameOfDomain: string): Database
+}
+
+DatabaseWithAllStandarts *-- Database : "Composition: contains / композиция: содержит базы данных"
+
+' Измерения и связь с параметрами
+class Measurement {
+  +id: int
+  +value: double
+  +date: Date
+  +parameter: Parameter
+}
+
+Measurement *-- Parameter : "Composition: includes / композиция: включает параметры"
+
+' Класс Report для замечаний
+class Report <<Development>> {
+  +id: int
+  +date: Date
+  +operator: Operator
+  +product: Product
+  +remarks: string
+}
+
+Report --> Operator : "Association: issued to / ассоциация: выдается оператору"
+Report --> Product : "Association: refers to / ассоциация: ссылается на продукт"
+Inspector --> Report : "Dependency: creates / зависимость: создает"
+
+' Производственный процесс
+class ProductionProcess {
+  +id: int
+  +name: string
+  +startDate: Date
+  +endDate: Date
+  +createProduct(operator: Operator): Product
+}
+
+Operator --> ProductionProcess : "Association: participates / ассоциация: участвует"
+
+' Инспекционный процесс
+class InspectionProcess {
+  +id: int
+  +name: string
+  +startDate: Date
+  +endDate: Date
+  +performMeasurement(product: Product): Measurement
+  +compareWithStandard(measurement: Measurement, standard: Standard): bool
+}
+
+Inspector --> InspectionProcess : "Association: participates / ассоциация: участвует"
+InspectionProcess *-- Measurement : "Composition: performs / композиция: выполняет измерение"
+
+' Модель, содержащая продукты, отчеты и стандарты
+class Model {
+  +database: Database
+  +products: List<Product>
+  +persons: List<Person>
+  +reports: List<Report>
+  +storeMeasurement(measurement: Measurement): void
+  +updateProductStatus(product: Product, status: string): void
+  +storeReport(report: Report): void
+}
+
+Model *-- Product : "Composition: manages / композиция: управляет продуктами"
+Model *-- Person : "Composition: manages / композиция: управляет людьми"
+Model *-- Report : "Composition: stores / композиция: хранит отчеты"
+Model --> Database : "Dependency: uses / зависимость: использует"
+
+' View и Controller
+class View {
+  +displayProducts(products: List<Product>): void
+  +displayMeasurements(measurements: List<Measurement>): void
+  +displayStandards(standards: List<Standard>): void
+  +displayReports(reports: List<Report>): void
+}
+
+class Controller {
+  +model: Model
+  +view: View
+  +handleProduction(operator: Operator, productType: string): Product
+  +handleInspection(inspector: Inspector, product: Product): void
+  +recordMeasurement(product: Product, measurement: Measurement): void
+  +generateReport(inspector: Inspector, operator: Operator, product: Product, remarks: string): void
+}
+
+Controller --> Model : "Dependency: updates / зависимость: обновляет"
+Controller --> View : "Dependency: updates / зависимость: обновляет"
+
+' Сенсор сбора данных
+class Sensor <<Development>> {
+  +collectData(): Measurement
+}
+
+Sensor --> Product : "Dependency: reads from / зависимость: считывает данные"
+Sensor --> Measurement : "Dependency: provides data / зависимость: передает данные"
+
+' Вспомогательный класс для даты
+class Date {
+  +day: int
+  +month: int
+  +year: int
+  +time: string
+}
+
+ProductionProcess *-- Date : "Composition: start and end dates / композиция: даты начала и конца"
+InspectionProcess *-- Date : "Composition: start and end dates / композиция: даты начала и конца"
+Measurement *-- Date : "Composition: date of measurement / композиция: дата измерения"
+Report *-- Date : "Composition: issued on / композиция: дата отчета"
+PersonalData *-- Date : "Composition: birthDate / композиция: дата рождения"
+@enduml
