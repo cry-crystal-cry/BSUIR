@@ -6,6 +6,7 @@
 *.sln
 *.vcxproj
 *.vcxproj.filters
+*.idea
 
 
 # User-specific files
