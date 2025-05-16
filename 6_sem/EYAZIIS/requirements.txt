@@ -1,0 +1,17 @@
+fastapi==0.115.2
+uvicorn==0.32.0
+streamlit==1.39.0
+langchain==0.3.3
+langchain-core==0.3.10
+langchain_community==0.3.2
+langchain_chroma==0.1.4
+sentence-transformers==3.2.0
+pypdf==5.0.1
+docx2txt==0.8
+python-multipart==0.0.12
+pydantic==2.9.2
+
+# venv\Scripts\activate
+# ollama serve
+# uvicorn FastAPI:app --host 0.0.0.0 --port 8000
+# streamlit run StreamlitUI.py
