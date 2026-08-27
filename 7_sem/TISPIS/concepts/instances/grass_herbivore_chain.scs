@@ -1,0 +1,4 @@
+grass_herbivore_chain
+<- concept_food_chain;
+=> nrel_main_idtf: [Травяной -> Травоядный -> Хищник] (* <- lang_ru;; *);
+=> nrel_note: [Пример: трава -> зебра -> лев] (* <- lang_ru;; *);;

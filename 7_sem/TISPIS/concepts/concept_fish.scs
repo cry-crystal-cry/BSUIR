@@ -1,0 +1,7 @@
+concept_fish
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [рыба] (* <- lang_ru;; *);
+=> nrel_note: [Водоёмные позвоночные, дышащие жабрами.] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_vertebrate;;

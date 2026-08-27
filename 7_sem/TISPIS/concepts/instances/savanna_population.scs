@@ -1,0 +1,4 @@
+savanna_population
+<- concept_population;
+=> nrel_main_idtf: [Популяция львов в саванне] (* <- lang_ru;; *);
+=> nrel_part_of_food_chain: grass_herbivore_chain;;

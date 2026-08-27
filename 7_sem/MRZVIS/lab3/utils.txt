@@ -1,0 +1,43 @@
+# Индивидуальная лабораторная работа 3 по дисциплине МРЗвИС вариант 5
+# Выполнена студентом группы 221701 БГУИР Телицей Ильей Денисовичем
+# Вспомогательный файл для создания тренировочной выборки
+# Использованные источники:
+# Формальные модели обработки информации и параллельные модели решения задач. Практикум: учебно-методическое пособие / В.П.Ивашенко. – Минск: БГУИР, 2020.
+
+
+
+
+import numpy as np
+
+def generate_data(task_type, length):
+    if task_type == "geometric":
+        return np.array([2**i for i in range(length)], dtype=float)
+    elif task_type == "fibonacci":
+        fib = [1, 1]
+        for i in range(length-2): fib.append(fib[-1] + fib[-2])
+        return np.array(fib, dtype=float)
+    elif task_type == "power":
+        return np.array([i**2 for i in range(1, length+1)], dtype=float)
+    elif task_type == "periodic":
+        return np.array([np.sin(i * 0.5) * 10 for i in range(length)], dtype=float)
+    return np.zeros(length)
+
+def create_sequences(data, in_size):
+    X, y = [], []
+    # Из набора данных длиной seq_len нарезаем окна шириной in_size
+    for i in range(len(data) - in_size - 3):
+        X.append(data[i : i + in_size])
+        y.append(data[i + in_size])
+    return np.array(X), np.array(y)
+
+class Scaler:
+    def __init__(self, use_log=False):
+        self.min, self.max = 0, 0
+        self.use_log = use_log
+    def fit_transform(self, data):
+        working_data = np.log(data + 1e-9) if self.use_log else data
+        self.min, self.max = np.min(working_data), np.max(working_data)
+        return (working_data - self.min) / (self.max - self.min + 1e-9)
+    def inverse_transform(self, data):
+        val = data * (self.max - self.min) + self.min
+        return np.exp(val) if self.use_log else val

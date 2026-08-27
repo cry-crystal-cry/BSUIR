@@ -1,0 +1,7 @@
+concept_amphibian
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [амфибия] (* <- lang_ru;; *);
+=> nrel_note: [Животные, проводящие часть жизни в воде, часть на суше (например, лягушки).] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_vertebrate;;

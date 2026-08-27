@@ -1,0 +1,10 @@
+concept_animal
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+   [животное]
+   (* <- lang_ru;; *);
+=> nrel_note:
+   [Животные — многоклеточные организмы, обычно гетеротрофные, способные к движению на некоторой стадии жизни.]
+   (* <- lang_ru;; *);;

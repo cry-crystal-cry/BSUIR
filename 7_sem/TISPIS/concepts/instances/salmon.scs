@@ -1,0 +1,6 @@
+salmon
+<- concept_fish;
+=> nrel_main_idtf: [Лосось] (* <- lang_ru;; *);
+=> nrel_idtf: [Salmo salar] (* <- lang_en;; *);
+=> nrel_habitat: freshwater;
+=> nrel_migration: ocean_freshwater_migration;;

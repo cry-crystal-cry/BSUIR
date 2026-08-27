@@ -1,0 +1,7 @@
+concept_invertebrate
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [беспозвоночное] (* <- lang_ru;; *);
+=> nrel_note: [Беспозвоночные — животные без позвоночного столба.] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_animal;;

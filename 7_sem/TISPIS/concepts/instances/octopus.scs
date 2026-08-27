@@ -1,0 +1,6 @@
+octopus
+<- concept_mollusk;
+=> nrel_main_idtf: [Осьминог] (* <- lang_ru;; *);
+=> nrel_idtf: [Octopus vulgaris] (* <- lang_en;; *);
+=> nrel_habitat: ocean;
+=> nrel_food_type: carnivore;;

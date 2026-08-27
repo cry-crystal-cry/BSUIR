@@ -1,0 +1,7 @@
+concept_genus
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [род] (* <- lang_ru;; *);
+=> nrel_note: [Род — классификационная группа, объединяющая смежные виды.] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_species;;

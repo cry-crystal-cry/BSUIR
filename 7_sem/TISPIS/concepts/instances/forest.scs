@@ -1,0 +1,3 @@
+forest
+<- concept_habitat;
+=> nrel_main_idtf: [Лес] (* <- lang_ru;; *);;

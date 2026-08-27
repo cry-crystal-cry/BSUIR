@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Чаты{% endblock %}
+
+{% block body %}
+<div class="layout">
+  {% include 'partials/sidebar.html' %}
+  <main class="chat-area">
+    {% if selected_chat %}
+      {% include 'partials/messages.html' %}
+
+      <form id="send-form" class="send-form">
+        <input name="content" id="message-input" placeholder="Введите сообщение..." required />
+            <label>
+          <input type="checkbox" id="voice-response-checkbox" />
+          Голосовой ответ
+        </label>
+        <button type="button" id="voice-record-button" title="Голосовой ввод (Серверная транскрипция)">
+          <span id="voice-icon">🎤</span>
+        </button>
+
+        <input
+          type="file"
+          id="document-upload-input"
+          accept=".docx, .pdf"
+          style="display: none;"
+        />
+        <button
+          type="button"
+          id="document-upload-button"
+          title="Загрузить документ (.docx, .pdf)"
+        >
+          📄
+        </button>
+
+        <button type="submit">Отправить</button>
+      </form>
+
+        <div class="tts-buttons">
+          <button id="tts-button" type="button">▶️ Озвучить текст</button>
+          <button id="play-audio-button" type="button">🔊 Прослушать последнее аудио</button>
+        </div>
+
+      <button id="toggle-tts-panel" class="toggle-btn">🎧 Настройки озвучки</button>
+
+      <section id="tts-settings" class="tts-settings hidden">
+        <h3>🎧 Настройки озвучки</h3>
+
+        <label for="voice-select">Голос:</label>
+        <select id="voice-select" name="speaker">
+          {% set default_speakers = ['aidar', 'baya', 'kseniya', 'xenia', 'eugene', 'random'] %}
+          {% for speaker in available_speakers or default_speakers %}
+            <option value="{{ speaker }}">{{ speaker }}</option>
+          {% endfor %}
+        </select>
+
+        <div class="slider-group">
+          <label for="speed-range">Скорость: <span id="speed-range-value">1.0</span>x</label>
+          <input type="range" id="speed-range" name="speed" min="0.2" max="3.0" value="1.0" step="0.1">
+        </div>
+
+        <div class="slider-group">
+          <label for="pitch-range">Высота тона (полутона): <span id="pitch-range-value">0</span></label>
+          <input type="range" id="pitch-range" name="pitch" min="-12" max="12" value="0" step="1">
+        </div>
+
+        <div class="slider-group">
+          <label for="gain-range">Громкость (дБ): <span id="gain-range-value">0</span></label>
+          <input type="range" id="gain-range" name="gain_db" min="-30" max="10" value="0" step="1">
+        </div>
+
+        <div class="slider-group">
+          <label for="reverb-time">Реверберация (сек): <span id="reverb-time-value">0.0</span></label>
+          <input type="range" id="reverb-time" name="reverb_time" min="0" max="5" step="0.1" value="0">
+
+          <label for="reverb-decay">Затухание (0..1): <span id="reverb-decay-value">0.00</span></label>
+          <input type="range" id="reverb-decay" name="reverb_decay" min="0" max="1" step="0.05" value="0">
+        </div>
+      </section>
+    {% else %}
+      <div class="empty">Выберите чат слева или создайте новый.</div>
+    {% endif %}
+  </main>
+</div>
+
+{% include 'partials/loading_indicator.html' %}
+
+{% if selected_chat %}
+<script>
+  // Контекст чата, как и был
+  window.__CHAT_CONTEXT = {
+    selected_chat: {{ selected_chat|tojson }},
+    initial_messages: {{ initial_messages|default([])|tojson }}
+  };
+
+
+  // </script>
+{% endif %}
+
+{% endblock %}

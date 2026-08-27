@@ -1,0 +1,7 @@
+concept_insect
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [насекомое] (* <- lang_ru;; *);
+=> nrel_note: [Насекомые — членистоногие с тремя парами ног и телом из трёх частей.] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_invertebrate;;

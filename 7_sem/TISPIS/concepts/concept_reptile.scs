@@ -1,0 +1,7 @@
+concept_reptile
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [рептилия] (* <- lang_ru;; *);
+=> nrel_note: [Рептилии — позвоночные с чешуйчатой кожей.] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_vertebrate;;

@@ -1,0 +1,7 @@
+concept_bird
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [птица] (* <- lang_ru;; *);
+=> nrel_note: [Птицы — позвоночные с оперением и клювом.] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_vertebrate;;

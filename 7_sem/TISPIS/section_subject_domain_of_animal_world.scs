@@ -1,0 +1,45 @@
+section_subject_domain_of_animal_world
+=> nrel_main_idtf:
+   [Раздел. Предметная область животного мира]
+   (* <- lang_ru;; *);
+   [Section. Subject domain of animal world]
+   (* <- lang_en;; *);
+<- atomic_section;;
+
+section_subject_domain_of_animal_world = [*
+ subject_domain_of_animal_world
+<- sc_node_struct;
+	=> nrel_main_idtf: [Предметная область животного мира] (* <- lang_ru;; *);
+	<- subject_domain;
+	-> rrel_maximum_studied_object_class: 
+   concept_animal;
+	-> rrel_not_maximum_studied_object_class:
+   concept_vertebrate;
+   concept_invertebrate;
+   concept_mammal;
+   concept_bird;
+   concept_reptile;
+   concept_fish;
+   concept_amphibian;
+   concept_insect;
+   concept_mollusk;
+	-> rrel_explored_relation:
+   nrel_habitat;
+   nrel_food_type;
+   nrel_life_cycle;
+   nrel_migration;
+   nrel_morphology;;
+*];;
+
+section_subject_domain_of_animal_world
+-> rrel_key_sc_element:
+   subject_domain_of_animal_world;
+   concept_animal;
+   concept_mammal;
+   concept_bird;
+   concept_reptile;
+   concept_fish;
+   concept_amphibian;
+   nrel_habitat;
+   nrel_food_type;
+   nrel_life_cycle;;

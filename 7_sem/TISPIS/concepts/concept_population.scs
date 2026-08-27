@@ -1,0 +1,6 @@
+concept_population
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [популяция] (* <- lang_ru;; *);
+=> nrel_note: [Совокупность особей одного вида, занимающая определённую территорию.] (* <- lang_ru;; *);;

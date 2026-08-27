@@ -1,0 +1,9 @@
+Реферат файла: medicine_1.txt
+Язык: English
+==================================================
+
+Ключевые предложения:
+Prostate cancer should no longer be viewed solely through an androgen-centric lens but rather as an estrogen-driven malignancy with a metabolic survival advantage. The convergence of estrogen signaling and metabolic dysregulation, as demonstrated in this study, necessitates a fundamental reclassification of prostate cancer based on estrogenic dependency and metabolic phenotype. The recognition of prostate cancer as a metabolically adaptive, estrogen-influenced malignancy necessitates a revision of current therapeutic frameworks, emphasizing estrogen blockade and metabolic intervention as critical components of precision oncology. Current evidence suggests that targeting estrogen-driven metabolic reprogramming could provide a novel therapeutic avenue, particularly in CRPC and treatment-resistant cases. By targeting this oncogenic axis, a paradigm shift in prostate cancer therapy can be realized — one that moves beyond androgen deprivation toward a more precise and effective treatment strategy that directly disrupts the tumor’s survival mechanisms.
+
+Ключевые слова:
+lens, rather, advantage, convergence, realize, move, precise, effective, glucolipotoxic, compound

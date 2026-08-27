@@ -1,0 +1,7 @@
+concept_mollusk
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [моллюск] (* <- lang_ru;; *);
+=> nrel_note: [Моллюски — беспозвоночные, часто с раковиной (напр., осьминоги, ракушки).] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_invertebrate;;

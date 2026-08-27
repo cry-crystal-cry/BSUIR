@@ -1,0 +1,6 @@
+elephant
+<- concept_mammal;
+=> nrel_main_idtf: [Слон] (* <- lang_ru;; *);
+=> nrel_idtf: [Loxodonta africana] (* <- lang_en;; *);
+=> nrel_habitat: savanna;
+=> nrel_food_type: herbivore;;

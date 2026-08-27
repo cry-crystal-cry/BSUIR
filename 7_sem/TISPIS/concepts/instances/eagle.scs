@@ -1,0 +1,7 @@
+eagle
+<- concept_bird;
+<- concept_predator;
+=> nrel_main_idtf: [Орел] (* <- lang_ru;; *);
+=> nrel_idtf: [Aquila chrysaetos] (* <- lang_en;; *);
+=> nrel_habitat: mountains;
+=> nrel_food_type: carnivore;;

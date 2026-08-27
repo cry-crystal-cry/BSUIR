@@ -1,0 +1,6 @@
+honey_bee
+<- concept_insect;
+=> nrel_main_idtf: [Медоносная пчела] (* <- lang_ru;; *);
+=> nrel_idtf: [Apis mellifera] (* <- lang_en;; *);
+=> nrel_habitat: meadow;
+=> nrel_food_type: pollinator;;

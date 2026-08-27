@@ -1,0 +1,146 @@
+# Индивидуальная лабораторная работа 3 по дисциплине МРЗвИС вариант 5
+# Выполнена студентом группы 221701 БГУИР Телицей Ильей Денисовичем
+# Вспомогательный файл для создания графиков
+# Использованные источники:
+# Формальные модели обработки информации и параллельные модели решения задач. Практикум: учебно-методическое пособие / В.П.Ивашенко. – Минск: БГУИР, 2020.
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+from model import LSTMModel
+from utils import generate_data, create_sequences, Scaler
+
+
+# Вспомогательная функция для расчета MAPE
+def calculate_mape(y_true, y_pred):
+    return np.mean(np.abs((y_true - y_pred) / (y_true + 1e-9))) * 100
+
+
+# Функция обучения до достижения определенной ошибки
+def train_until_error(task_type, in_size, hidden, lr, alpha, err_threshold, max_epochs=10000):
+    raw_data = generate_data(task_type, length=40)
+    scaler = Scaler(use_log=(task_type in ["geometric", "fibonacci"]))
+    data_norm = scaler.fit_transform(raw_data)
+    X, y = create_sequences(data_norm, in_size)
+
+    model = LSTMModel(in_size, hidden, 1, alpha)
+
+    for epoch in range(1, max_epochs + 1):
+        errors = []
+        idx_shuffle = np.random.permutation(len(X))
+        for i in idx_shuffle:
+            mse = model.train_step(X[i], y[i], lr)
+            errors.append(mse)
+
+        current_mse = np.mean(errors)
+        if current_mse <= err_threshold:
+            return epoch
+    return max_epochs
+
+
+def plot_all_dependencies():
+    plt.style.use('seaborn-v0_8-whitegrid')
+    task = "fibonacci"  # Степенная функция
+    alpha_val = 0.02
+
+    # --- ГРАФИК 1: Итерации от допустимой ошибки ---
+    print("Построение графика 1...")
+    errors_to_test = [0.005, 0.001, 0.0005, 0.0001, 0.00005, 0.00001, 0.000005]
+    win_fixed, hid_fixed, lr_fixed = 3, 16, 0.02
+
+    iters_err = []
+    for err in errors_to_test:
+        # st = 3 (среднее по 3 запускам для плавности)
+        res = [train_until_error(task, win_fixed, hid_fixed, lr_fixed, alpha_val, err) for _ in range(3)]
+        iters_err.append(np.mean(res))
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(errors_to_test, iters_err, 'o-', color='blue', linewidth=2)
+    plt.xscale('log')
+    plt.title('Зависимость количества итераций от допустимой ошибки\n' +
+              f'(Параметры: a={lr_fixed}, win={win_fixed}, hid={hid_fixed}, alpha={alpha_val})', fontsize=12)
+    plt.xlabel('Максимально допустимая ошибка (err)')
+    plt.ylabel('Среднее количество итераций (epoch)')
+    plt.savefig('plot_1_error.png')
+
+    # --- ГРАФИК 2: Итерации от коэффициента обучения (LR) ---
+    print("Построение графика 2...")
+    lrs = [0.0001, 0.001, 0.005, 0.01, 0.02, 0.05]
+    err_fixed, win_fixed, hid_fixed = 0.0005, 3, 16
+
+    iters_lr = []
+    for lr in lrs:
+        res = [train_until_error(task, win_fixed, hid_fixed, lr, alpha_val, err_fixed) for _ in range(3)]
+        iters_lr.append(np.mean(res))
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(lrs, iters_lr, 's-', color='green', linewidth=2)
+    plt.title('Зависимость количества итераций от коэффициента обучения\n' +
+              f'(Параметры: err={err_fixed}, win={win_fixed}, hid={hid_fixed}, alpha={alpha_val})', fontsize=12)
+    plt.xlabel('Коэффициент обучения (a)')
+    plt.ylabel('Среднее количество итераций (epoch)')
+    plt.savefig('plot_2_lr.png')
+
+    # --- ГРАФИК 3: Итерации от размера окна (win) ---
+    print("Построение графика 3...")
+    windows = [2, 3, 4, 5, 6]
+    err_fixed, lr_fixed, hid_fixed = 0.0005, 0.01, 16
+
+    iters_win = []
+    for win in windows:
+        res = train_until_error(task, win, hid_fixed, lr_fixed, alpha_val, err_fixed)
+        iters_win.append(res)
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(windows, iters_win, 'd-', color='red', linewidth=2)
+    plt.title('Зависимость количества итераций от размера скользящего окна\n' +
+              f'(Параметры: a={lr_fixed}, err={err_fixed}, hid={hid_fixed}, alpha={alpha_val})', fontsize=12)
+    plt.xlabel('Размер скользящего окна (win)')
+    plt.ylabel('Количество итераций (epoch)')
+    plt.savefig('plot_3_window.png')
+
+    # --- ГРАФИК 4: MAPE от итераций и количества нейронов ---
+    print("Построение графика 4...")
+    hidden_variants = [8, 16, 32]
+    epochs_checkpoints = [1000, 2000, 4000, 8000]
+    win_fixed, lr_fixed = 3, 0.01
+
+    plt.figure(figsize=(10, 6))
+    raw_data = generate_data(task, length=40)
+
+    for hid in hidden_variants:
+        mape_history = []
+        scaler = Scaler(use_log=False)
+        data_norm = scaler.fit_transform(raw_data)
+        X, y = create_sequences(data_norm, win_fixed)
+        model = LSTMModel(win_fixed, hid, 1, alpha_val)
+
+        current_epoch = 0
+        for target_epoch in epochs_checkpoints:
+            for _ in range(target_epoch - current_epoch):
+                idx = np.random.permutation(len(X))
+                for i in idx:
+                    model.train_step(X[i], y[i], lr_fixed)
+            current_epoch = target_epoch
+
+            p_norms = [model.forward(x)[0][0, 0] for x in X]
+            p_real = scaler.inverse_transform(np.array(p_norms))
+            y_real = scaler.inverse_transform(y)
+            mape_history.append(calculate_mape(y_real, p_real))
+
+        plt.plot(epochs_checkpoints, mape_history, 'x-', label=f'hid={hid}', linewidth=2)
+
+    plt.title('Зависимость MAPE от количества итераций и нейронов скрытого слоя\n' +
+              f'(Параметры: a={lr_fixed}, win={win_fixed}, alpha={alpha_val})', fontsize=12)
+    plt.xlabel('Количество итераций (epoch)')
+    plt.ylabel('Средняя абсолютная процентная ошибка (MAPE), %')
+    plt.legend(title="Нейроны (hid)")
+    plt.savefig('plot_4_mape.png')
+
+    print(
+        "\nВсе графики сохранены. Проверьте файлы: plot_1_error.png, plot_2_lr.png, plot_3_window.png, plot_4_mape.png")
+    plt.show()
+
+
+if __name__ == "__main__":
+    plot_all_dependencies()

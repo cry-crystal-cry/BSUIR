@@ -1,0 +1,7 @@
+Language:
+English
+
+Summary:
+A patient was referred for endodontic treatment of tooth 37, presenting extensive calcification in the pulp chamber and mesial canal, observed on radiographs, in addition to an acute periapical abscess. The success of endodontic therapy depends on several correct actions and care throughout the entire process, especially with proper coronal opening, as some errors at this stage can compromise the prognosis of the treatment(Siqueira Jr& Rôças, 2009). Canal mineralization is a common complication in endodontic treatment, characterized by radiographic loss of the pulp space and yellowish coloration in the coronal portion of the tooth(McCabe& Dummer, 2012), it occurs when the pulp is damaged, leading to the formation of mineralized tissue(Oginni et al., 2009). The precise process of canal obstruction through calcification is presumed to be related to problems in the neurovascular supply of the pulp after an injury, as stated by Robertson(1996); and McCabe and Dummer(2012), who in their studies, found that more than 25% of traumatized anterior teeth developed pulp obliteration. Periapical lesions have a multifactorial etiology, being influenced by factors such as bacterial infections resulting from untreated caries, periodontitis, or dental trauma; whether from sports injuries, falls, bruxism, or even chemical irritation due to improper procedures.
+
+Keywords: canal, pulp, periapical, endodontic, et, calcification, brazil, locate, cbct, fig

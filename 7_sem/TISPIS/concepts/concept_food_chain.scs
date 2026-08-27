@@ -1,0 +1,6 @@
+concept_food_chain
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [пищевная цепь] (* <- lang_ru;; *);
+=> nrel_note: [Последовательность трофических уровней, через которые проходит энергия.] (* <- lang_ru;; *);;

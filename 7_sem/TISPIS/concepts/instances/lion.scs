@@ -1,0 +1,7 @@
+lion
+<- concept_mammal;
+<- concept_predator;
+=> nrel_main_idtf: [Лев] (* <- lang_ru;; *);
+=> nrel_idtf: [Panthera leo] (* <- lang_en;; *);
+=> nrel_habitat: savanna;
+=> nrel_food_type: carnivore;;

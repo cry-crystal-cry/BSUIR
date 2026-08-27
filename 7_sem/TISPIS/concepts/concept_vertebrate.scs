@@ -1,0 +1,7 @@
+concept_vertebrate
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [хордовые с позвоночником] (* <- lang_ru;; *);
+=> nrel_note: [Позвоночные — животные с позвоночным столбом.] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_animal;;

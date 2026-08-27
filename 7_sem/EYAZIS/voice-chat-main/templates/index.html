@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Вход{% endblock %}
+
+{% block body %}
+<div class="login-wrapper">
+    <div class="login">
+        <h2>Вход / регистрация</h2>
+
+        <form method="post"  autocomplete="off" action="/login" >
+            <label>Имя пользователя</label>
+            <input type="text" name="username" required/>
+
+            <label>Пароль</label>
+            <input type="password" name="password"/>
+
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

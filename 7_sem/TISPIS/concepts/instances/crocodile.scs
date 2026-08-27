@@ -1,0 +1,7 @@
+crocodile
+<- concept_reptile;
+<- concept_predator;
+=> nrel_main_idtf: [Крокодил] (* <- lang_ru;; *);
+=> nrel_idtf: [Crocodylus niloticus] (* <- lang_en;; *);
+=> nrel_habitat: freshwater;
+=> nrel_food_type: carnivore;;

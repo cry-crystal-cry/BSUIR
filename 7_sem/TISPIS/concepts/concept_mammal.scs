@@ -1,0 +1,7 @@
+concept_mammal
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [млекопитающее] (* <- lang_ru;; *);
+=> nrel_note: [Теплокровные позвоночные, вскармливающие детёнышей молоком.] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_vertebrate;;

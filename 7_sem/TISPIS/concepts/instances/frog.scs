@@ -1,0 +1,5 @@
+frog
+<- concept_amphibian;
+=> nrel_main_idtf: [Лягушка] (* <- lang_ru;; *);
+=> nrel_habitat: wetlands;
+=> nrel_life_cycle: tadpole_to_adult;;

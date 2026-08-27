@@ -1,0 +1,4 @@
+panthera_leo
+<- concept_species;
+=> nrel_main_idtf: [Panthera leo] (* <- lang_en;; *);
+<= nrel_inclusion: panthera;;

@@ -1,0 +1,6 @@
+concept_species
+<- concept_wit_entity;
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf: [вид] (* <- lang_ru;; *);
+=> nrel_note: [Вид — наименьшая единица классификации, группа особей, способных к скрещиванию.] (* <- lang_ru;; *);;
